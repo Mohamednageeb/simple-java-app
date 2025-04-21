@@ -1,21 +1,15 @@
 pipeline {
     agent any
-       
     stages {
-        stage('build') {  // ✅ Stage names should ideally be lowercase or kebab-case
+        stage('build') {
             steps {
-                script {
-                    echo "build in progress"
-                }
+                echo "build in progress"
             }
         }
-    
         stage('test') {
             steps {
-                script {
-                    echo "test in progress"
-                }
+                echo "test in progress"
             }
         }
-    }  // ✅ Correctly closes `stages` block
-}      // ✅ Correctly closes `pipeline` block
+    }
+}
